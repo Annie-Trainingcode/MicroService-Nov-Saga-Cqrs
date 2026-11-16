@@ -5016,11 +5016,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\MicroService Nov26\\Services\\VehicleService\\VehicleService.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\MicroServiceNov26\\Services\\VehicleService\\VehicleService.csproj",
       "projectName": "VehicleService",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\MicroService Nov26\\Services\\VehicleService\\VehicleService.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\MicroServiceNov26\\Services\\VehicleService\\VehicleService.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\MicroService Nov26\\Services\\VehicleService\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\MicroServiceNov26\\Services\\VehicleService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
