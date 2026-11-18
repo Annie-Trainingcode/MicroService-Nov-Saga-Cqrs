@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "rLjI73QjO8Q=",
+  "dgSpecHash": "yXGNf9rN2cA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Desktop\\MicroServiceNov26\\Services\\AlertService\\AlertService.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\confluent.kafka\\2.8.0\\confluent.kafka.2.8.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\librdkafka.redist\\2.8.0\\librdkafka.redist.2.8.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.0\\microsoft.aspnetcore.authentication.jwtbearer.9.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
