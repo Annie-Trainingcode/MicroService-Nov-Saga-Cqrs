@@ -14,6 +14,8 @@ builder.Services.AddControllers();
 builder.Services.AddSingleton<MongoDbContext>();
 // Repositories
 builder.Services.AddScoped<IDriverRepository, DriverRepository>();
+builder.Services.AddScoped<IDemoDriverReservationRepository, DemoDriverReservationRepository>();
+
 // Only RabbitMQ for driver notifications
 builder.Services.AddSingleton<IMessagePublisher, RabbitMQPublisher>();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

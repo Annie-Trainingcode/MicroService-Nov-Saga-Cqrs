@@ -65,6 +65,18 @@ namespace DriverService.Data
                 return _database.GetCollection<Driver>("Drivers");
             }
         }
+           public IMongoCollection<DemoDriverReservation> DemoDriverReservations
+        {
+            get
+            {
+                if (!IsConnected || _database == null)
+                {
+                    throw new InvalidOperationException("MongoDB is not connected. Please ensure MongoDB is running on localhost:27017");
+                }
+                return _database.GetCollection<DemoDriverReservation>("DemoDriverReservations");
+            }
+        }
+    
 
     }
 }

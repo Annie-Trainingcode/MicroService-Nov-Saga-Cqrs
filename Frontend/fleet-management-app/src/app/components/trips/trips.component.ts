@@ -39,7 +39,7 @@ import { Driver } from '../../models/driver.model';
                 <select class="form-control" formControlName="driverID">
                   <option value="">Select Driver</option>
                   @for (driver of drivers; track driver.id) {
-                    <option [value]="driver.id">{{ driver.firstName }} {{ driver.lastName }}</option>
+                    <option [value]="driver.driverID">{{ driver.id }}</option>
                   }
                 </select>
               </div>
@@ -48,6 +48,10 @@ import { Driver } from '../../models/driver.model';
             <div class="form-group">
               <label>Start Location *</label>
               <input type="text" class="form-control" formControlName="startLocation">
+            </div>
+            <div class="form-group">
+              <label>End Location *</label>
+              <input type="text" class="form-control" formControlName="endLocation">
             </div>
 
             <button type="submit" class="btn btn-primary" [disabled]="tripForm.invalid || loading">
@@ -418,7 +422,8 @@ export class TripsComponent implements OnInit {
     this.tripForm = this.fb.group({
       vehicleID: ['', Validators.required],
       driverID: ['', Validators.required],
-      startLocation: ['', Validators.required]
+      startLocation: ['', Validators.required],
+      endLocation:['',Validators.required]
     });
 
     this.endTripForm = this.fb.group({
@@ -465,7 +470,7 @@ export class TripsComponent implements OnInit {
     this.driverService.getAllDrivers().subscribe({
       next: (data) => {
         this.drivers = data;
-        alert(this.drivers)
+       // alert(JSON.stringify(this.drivers))
       },
       error: (error) => {
         console.error('Failed to load drivers', error);
@@ -479,7 +484,7 @@ export class TripsComponent implements OnInit {
     this.loading = true;
     this.error = '';
     this.success = '';
-
+   //alert(this.tripForm.value)
     this.tripService.createTrip(this.tripForm.value).subscribe({
       next: () => {
         this.success = 'Trip started successfully';

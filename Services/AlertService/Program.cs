@@ -57,7 +57,7 @@ builder.Services.AddDbContext<AlertDbContext>(options =>
 // Register repositories
 builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
 
-
+builder.Services.AddHttpClient();
 // CORS
 builder.Services.AddCors(options =>
 {

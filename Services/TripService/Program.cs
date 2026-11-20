@@ -7,6 +7,7 @@ using System.Text;
 using TripService.Data;
 using TripService.Repositories;
 using TripService.Messaging;
+using TripService.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -50,7 +51,12 @@ builder.Services.AddSwaggerGen(options =>
 
 builder.Services.AddDbContext<TripDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+// Demo-only CQRS + Event Sourcing registrations (isolated from existing flow)
+builder.Services.AddScoped<IDemoTripEventStore, DemoTripEventStore>();
+builder.Services.AddScoped<CreateDemoTripCommandHandler>();
+builder.Services.AddScoped<CompleteDemoTripCommandHandler>();
+builder.Services.AddScoped<CancelDemoTripCommandHandler>();
+builder.Services.AddScoped<GetDemoTripByIdQueryHandler>();
 // Only Kafka for trip notifications
 builder.Services.AddSingleton<IKafkaProducer, KafkaProducer>();
 
